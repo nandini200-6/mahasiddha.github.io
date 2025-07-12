@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="title">Temple Events - Shri Mahasiddha Mandir</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fefefe, #ffe4c4);
+      color: #3e2723;
+    }
+
+    header {
+      background-color: #d2691e;
+      color: white;
+      padding: 1.2rem;
+      font-size: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .back-arrow {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: black;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-arrow:hover {
+      background-color: #333;
+    }
+
+    .event-section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .event-section h2 {
+      text-align: center;
+      color: #bf360c;
+      margin-bottom: 2rem;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .event-card {
+      background: #fffaf0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .event-card:hover {
+      transform: scale(1.03);
+    }
+
+    .event-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .event-content {
+      padding: 1rem;
+    }
+
+    .event-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #a84300;
+    }
+
+    .event-date {
+      font-size: 0.95rem;
+      color: #6d4c41;
+      margin: 0.5rem 0;
+    }
+
+    .event-description {
+      font-size: 1rem;
+      color: #4e342e;
+    }
+
+    footer {
+      background-color: #a84300;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="temple.html.html" class="back-arrow" title="Back to Temple">&#8592;</a>
+  <span data-translate="header">Shri Mahasiddha Mandir, Solapur - Events</span>
+</header>
+
+<section class="event-section">
+  <h2 data-translate="upcoming">Upcoming & Recent Events</h2>
+  <div class="events-grid">
+    <div class="event-card">
+      <img class="event-image" src="images\o.jpg" alt="Bhutalsiddha Celebration">
+      <div class="event-content">
+        <div class="event-title" data-translate="event1_title">Bhutalsiddha Celebration</div>
+        <div class="event-date" data-translate="event1_date">Date: 1st Sunday of May</div>
+        <div class="event-description" data-translate="event1_desc">
+          A grand celebration with bhajan, satsang, and prasad offering to honor the spiritual lineage of Mahasiddha.
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img class="event-image" src="images\img14.jpg" alt="Mahasiddha Yatra">
+      <div class="event-content">
+        <div class="event-title" data-translate="event2_title">Mahasiddha Yatra</div>
+        <div class="event-date" data-translate="event2_date">Date: september</div>
+        <div class="event-description" data-translate="event2_desc">
+          Annual Jayanti Mahotsav of Shri Amoghsiddha with traditional rituals, abhishek, and cultural events.
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img class="event-image" src="images\img11.jpg" alt="Ganesh Jayanti">
+      <div class="event-content">
+        <div class="event-title" data-translate="event3_title">Ganesh Jayanti</div>
+        <div class="event-date" data-translate="event3_date">Date: September</div>
+        <div class="event-description" data-translate="event3_desc">
+          Join the divine procession of Mahasiddha on a beautifully decorated rath through Solapur streets.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p data-translate="footer">© Shri Mahasiddha Mandir, Solapur. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      title: "Temple Events - Shri Mahasiddha Mandir",
+      header: "Shri Mahasiddha Mandir, Solapur - Events",
+      upcoming: "Upcoming & Recent Events",
+      event1_title: "Bhutalsiddha Celebration",
+      event1_date: "Date: 1st Sunday of May",
+      event1_desc: "A grand celebration with bhajan, satsang, and prasad offering to honor the spiritual lineage of Mahasiddha.",
+      event2_title: "Mahasiddha yatra",
+      event2_date: "Date: September",
+      event2_desc: "Annual Jayanti Mahotsav of Shri Amoghsiddha with traditional rituals, abhishek, and cultural events.",
+      event3_title: "Ganesh Jayanti Yatra",
+      event3_date: "Date:  September",
+      event3_desc: "Join the divine procession of Mahasiddha on a beautifully decorated rath through Solapur streets.",
+      footer: "© Shri Mahasiddha Mandir, Solapur. All Rights Reserved."
+    },
+    mr: {
+      title: "मंदिर कार्यक्रम - श्री महासिद्ध मंदिर",
+      header: "श्री महासिद्ध मंदिर, सोलापूर - कार्यक्रम",
+      upcoming: "आगामी व अलीकडील कार्यक्रम",
+      event1_title: "भूताळसिद्ध उत्सव",
+      event1_date: "दिनांक: २१ जुलै २०२५",
+      event1_desc: "भजन, सत्संग आणि प्रसाद सोहळ्यासह महापुरुषांच्या परंपरेला समर्पित भव्य उत्सव.",
+      event2_title: "महासिद्ध यात्रा",
+      event2_date: "दिनांक: सप्टेंबर,
+      event2_desc: "श्री अमोधसिद्ध यांची वार्षिक जयंती महोत्सव पारंपरिक विधी, अभिषेक आणि सांस्कृतिक कार्यक्रमांसह.",
+      event3_title: "गणेश जयंती यात्रा",
+      event3_date: "दिनांक: सप्टेंबर ",
+      event3_desc: "श्री महासिद्ध यांची रथ यात्रा सोलापूर शहरातील रस्त्यांवरून साजरी केली जाईल.",
+      footer: "© श्री महासिद्ध मंदिर, सोलापूर. सर्व हक्क राखीव."
+    },
+    kn: {
+      title: "ದೇಗುಲ ಘಟನೆಗಳು - ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ",
+      header: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೋಲಾಪುರ್ - ಘಟನೆಗಳು",
+      upcoming: "ಬರುವ ಮತ್ತು ಇತ್ತೀಚಿನ ಘಟನೆಗಳು",
+      event1_title: "ಭುತಲಸಿದ್ಧರ ಹಬ್ಬ",
+      event1_date: "ದಿನಾಂಕ: ೨೧ ಜುಲೈ ೨೦೨೫",
+      event1_desc: "ಭಜನ, ಸತ್ಸಂಗ ಮತ್ತು ಪ್ರಸಾದದೊಂದಿಗೆ ಮಹಾಸಿದ್ಧರ ಆಧ್ಯಾತ್ಮಿಕ ಪರಂಪರೆಯನ್ನು ಗೌರವಿಸುವ ಭವ್ಯ ಉತ್ಸವ.",
+      event2_title: "ಅಮೊಘಸಿದ್ಧ ಜಯಂತಿ",
+      event2_date: "ದಿನಾಂಕ: ೧೫ ಆಗಸ್ಟ್ ೨೦೨೫",
+      event2_desc: "ಶ್ರೀ ಅಮೋಘಸಿದ್ಧರ ವಾರ್ಷಿಕ ಜಯಂತಿ ಮಹೋತ್ಸವ, ಪರಂಪರೆಯ ವಿಧಿಗಳು ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮಗಳೊಂದಿಗೆ.",
+      event3_title: "ಗಣೇಶ ಜಯಂತಿ ಯಾತ್ರೆ",
+      event3_date: "ದಿನಾಂಕ:  ಸೆಪ್ಟೆಂಬರ್ ",
+      event3_desc: "ಸೋಲಾಪುರ ರಸ್ತೆಗಳ ಮೂಲಕ ಮೆರವಣಿಗೆಯಲ್ಲಿ ಮಹಾಸಿದ್ಧರ ರಥಯಾತ್ರೆಗೆ ಸೇರಿ.",
+      footer: "© ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೋಲಾಪುರ್. ಎಲ್ಲ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+    }
+  };
+
+  const selectedLang = localStorage.getItem("lang") || "en";
+  document.querySelectorAll("[data-translate]").forEach(el => {
+    const key = el.getAttribute("data-translate");
+    if (translations[selectedLang][key]) {
+      el.textContent = translations[selectedLang][key];
+    }
+  });
+</script>
+
+</body>
+</html>

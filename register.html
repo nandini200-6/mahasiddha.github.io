@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Shri Mahasiddha Mandir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Kaisei Tokumin', serif;
+      background: linear-gradient(to right, #ffe0b2, #ffcc80);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .register-container {
+      background-color: #ffffffee;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .register-container h2 {
+      margin-bottom: 1.5rem;
+      color: #b34700;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.6rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: #ff9800;
+      outline: none;
+      box-shadow: 0 0 5px #ffc107;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e65100;
+    }
+
+    .footer-link {
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-link a {
+      color: #b30000;
+      text-decoration: none;
+    }
+
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+
+    .temple-name {
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: #bf360c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="register-container">
+  <div class="temple-name" data-i18n="temple">Shri Mahasiddha Mandir</div>
+  <h2 data-i18n="create_account">Create Account</h2>
+  <form onsubmit="return registerUser()">
+    <input type="text" id="fullname" placeholder="Full Name" required data-i18n-placeholder="full_name" />
+    <input type="email" id="email" placeholder="Email" required data-i18n-placeholder="email" />
+    <input type="text" id="username" placeholder="Username" required data-i18n-placeholder="username" />
+    <input type="password" id="password" placeholder="Password" required data-i18n-placeholder="password" />
+    <input type="password" id="confirm" placeholder="Confirm Password" required data-i18n-placeholder="confirm_password" />
+    <button type="submit" data-i18n="register">Register</button>
+  </form>
+
+  <div class="footer-link">
+    <p><span data-i18n="already_account">Already have an account?</span> <a href="login1.html" data-i18n="login_here">Login here</a></p>
+  </div>
+</div>
+
+<script>
+  function registerUser() {
+    const name = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('password').value;
+    const confirm = document.getElementById('confirm').value;
+
+    if (pass !== confirm) {
+      alert(getText('password_mismatch'));
+      return false;
+    }
+
+    alert(getText('registration_success') + " " + name);
+    window.location.href = "temple.html";
+    return false;
+  }
+
+  // Translations
+  const translations = {
+    en: {
+      temple: "Shri Mahasiddha Mandir",
+      create_account: "Create Account",
+      full_name: "Full Name",
+      email: "Email",
+      username: "Username",
+      password: "Password",
+      confirm_password: "Confirm Password",
+      register: "Register",
+      already_account: "Already have an account?",
+      login_here: "Login here",
+      password_mismatch: "Passwords do not match!",
+      registration_success: "Registration successful for"
+    },
+    mr: {
+      temple: "श्री महासिद्ध मंदिर",
+      create_account: "खाते तयार करा",
+      full_name: "पूर्ण नाव",
+      email: "ईमेल",
+      username: "वापरकर्ता नाव",
+      password: "पासवर्ड",
+      confirm_password: "पासवर्ड पुन्हा लिहा",
+      register: "नोंदणी करा",
+      already_account: "आधीच खाते आहे?",
+      login_here: "लॉगिन करा",
+      password_mismatch: "पासवर्ड जुळत नाहीत!",
+      registration_success: "नोंदणी यशस्वी झाली"
+    },
+    kn: {
+      temple: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ",
+      create_account: "ಖಾತೆ ರಚಿಸಿ",
+      full_name: "ಪೂರ್ಣ ಹೆಸರು",
+      email: "ಇಮೇಲ್",
+      username: "ಬಳಕೆದಾರ ಹೆಸರು",
+      password: "ಗುಪ್ತಪದ",
+      confirm_password: "ಗುಪ್ತಪದ ದೃಢೀಕರಿಸಿ",
+      register: "ನೋಂದಣಿ",
+      already_account: "ಈಗಾಗಲೇ ಖಾತೆ ಇದೆಯೆ?",
+      login_here: "ಲಾಗಿನ್ ಮಾಡಿ",
+      password_mismatch: "ಗುಪ್ತಪದಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ!",
+      registration_success: "ನೋಂದಣಿ ಯಶಸ್ವಿ"
+    }
+  };
+
+  function getText(key) {
+    const lang = localStorage.getItem("lang") || "en";
+    return translations[lang][key] || translations.en[key];
+  }
+
+  function applyTranslations() {
+    const lang = localStorage.getItem("lang") || "en";
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = translations[lang][key] || translations.en[key];
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      el.placeholder = translations[lang][key] || translations.en[key];
+    });
+  }
+
+  applyTranslations();
+</script>
+
+</body>
+</html>

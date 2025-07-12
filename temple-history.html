@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Temple History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Kaisei Tokumin', serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+      color: #4b2e05;
+    }
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 999;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f57c00;
+      color: white;
+    }
+    header h1 {
+      margin-bottom: 0.3rem;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .main-image {
+      text-align: center;
+      margin: 1.5rem 0 1rem;
+    }
+    .main-image img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      border: 4px solid #d2691e;
+    }
+    .temple-info {
+      max-width: 900px;
+      margin: auto;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      background-color: #fff3e0;
+      border: 2px solid #ff9800;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: black;
+    }
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .section img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 0 1rem;
+      border: 3px solid #a0522d;
+    }
+    .section .text {
+      flex: 1;
+      padding: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      background-color: #fff8e6;
+      border-radius: 8px;
+      color: black;
+      border: 2px solid #cd853f;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f57c00;
+      color: white;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .section img {
+        margin: 1rem auto;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="back-btn" href="temple.html.html">&#8592;</a>
+
+  <header>
+    <h1 data-i18n="heading">🛕 Temple History</h1>
+    <p data-i18n="subheading">Honoring the Legacy of Spiritual Siddhas</p>
+  </header>
+
+  <div class="main-image">
+    <img src="images/photo7.jpg" alt="Temple Image" />
+  </div>
+
+  <div class="temple-info" data-i18n="intro">
+    Shri Mahasiddha Mandir, located in the spiritual heart of Solapur, is a beacon of devotion and divine energy.
+    This sacred temple stands as a testament to centuries of spiritual tradition, where generations of devotees
+    have gathered to seek blessings and experience inner peace. The temple is known for its vibrant festivals,
+    daily rituals, and strong connection to the Siddha saints who have blessed this land.
+  </div>
+
+  <div class="section">
+    <img src="images/mahasiddha.jpg" alt="Mahasiddha" />
+    <div class="text" data-i18n="mahasiddha">
+      <h2>Mahasiddha</h2>
+      <p>Shri Mahasiddha was a revered saint known for his deep meditation, miracles, and teachings that emphasized
+        devotion and righteousness. His presence blessed the land of Solapur and continues to inspire generations of devotees.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <img src="images/amogsiddha.jpg" alt="Amogsiddha" />
+    <div class="text" data-i18n="amogsiddha">
+      <h2>Amogsiddha</h2>
+      <p>Shri Amogsiddha was a spiritual master who spread peace and healing. He was known for guiding people with
+        his calm presence and wisdom. His name symbolizes "infallible accomplishment" and his blessings are
+        believed to remove obstacles in life.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <img src="images/bhutalsiddha.jpg" alt="Bhutalsiddha" />
+    <div class="text" data-i18n="bhutalsiddha">
+      <h2>Bhutalsiddha</h2>
+      <p>Shri Bhutalsiddha was deeply connected to nature and divine forces. He meditated in solitude and was revered
+        as a powerful siddha capable of protecting people from unseen forces. Devotees continue to worship him for
+        strength and protection.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i18n="footer">© Shri Mahasiddha Mandir, Solapur. All rights reserved.</span>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Temple History",
+        heading: "🛕 Temple History",
+        subheading: "Honoring the Legacy of Spiritual Siddhas",
+        intro: "Shri Mahasiddha Mandir, located in Solapur, Maharashtra, is a sacred temple dedicated to Shri Mahasiddha, a divine Siddha saint known for his spiritual wisdom and healing blessings. Thousands of devotees visit seeking peace, protection, and inner strength.
+
+The temple's traditional Hindu architecture creates a serene space for worship and meditation. Major festivals like Mahasiddha Yatra are celebrated with devotion, rituals, and cultural programs. It is believed that prayers here remove obstacles and promote personal and spiritual growth.
+
+This temple is not just a place of worship but also a center for community service, charity, and spiritual upliftment."
+
+
+        mahasiddha:"Shri Mahasiddha Mandir, located in Solapur, Maharashtra, is a sacred temple dedicated to Shri Mahasiddha, a revered Siddha saint known for his divine energy and spiritual wisdom. The temple attracts thousands of devotees seeking blessings, peace, and healing.
+
+With traditional architecture and a serene atmosphere, the temple is a hub for worship, meditation, and festivals like Mahasiddha Yatra, celebrated with devotion and cultural programs. Believed to remove obstacles and promote inner strength, this temple is a spiritual haven for all who seek divine connection and personal growth.",
+
+
+        amogsiddha: Shri Amogsiddha Mandir, located in Solapur, Maharashtra, is a spiritually significant temple dedicated to Shri Amogsiddha, a revered Jain Siddha saint. The name "Amogsiddha" symbolizes infallible blessings and spiritual liberation.
+
+This serene temple is known for its peaceful ambiance, traditional architecture, and spiritual rituals like abhishek and Amogsiddha Jayanti. Devotees visit seeking wisdom, peace, and freedom from life’s obstacles. The temple also promotes non-violence, compassion, and community values, making it a beacon of spiritual purity in Solapur.",
+
+
+        bhutalsiddha: Shri Bhutalsiddha Mandir, located in Solapur, Maharashtra, is a sacred temple dedicated to Shri Bhutalsiddha Maharaj, known for his spiritual power, miracles, and deep devotion. The name “Bhutalsiddha” symbolizes his divine connection with the earth and unwavering energy.
+
+This serene temple attracts devotees seeking blessings, strength, and peace. Regular celebrations like Bhutalsiddha Jayanti and spiritual events make it a hub of devotion and harmony in Solapur.",
+
+
+        gotoTemple: "Go to Temple Page",
+        footer: "© Shri Mahasiddha Mandir, Solapur. All rights reserved."
+      },
+      mr: {
+        title: "मंदिर इतिहास",
+        heading: "🛕 मंदिर इतिहास",
+        subheading: "आध्यात्मिक सिद्धांच्या परंपरेला मान",
+
+        intro: "श्री महासिद्ध मंदिर, सोलापूर (महाराष्ट्र) येथे स्थित एक पवित्र मंदिर आहे, जे श्री महासिद्ध या सिद्ध पुरुषांना अर्पण केलेले आहे. हे मंदिर श्रद्धा, भक्ती आणि आध्यात्मिक शक्तीचे केंद्र आहे, जिथे हजारो भक्त शांतता, संरक्षण आणि आत्मिक बळासाठी येतात.
+
+या मंदिरात पारंपरिक हिंदू स्थापत्यशैली आहे आणि महासिद्ध यात्रा यासारखे उत्सव भक्तिभावाने साजरे केले जातात. येथे प्रार्थना केल्याने अडथळे दूर होतात आणि आध्यात्मिक प्रगती घडते, असे मानले जाते.
+
+हे मंदिर भक्तीसोबतच समाजसेवा आणि सांस्कृतिक जतनाचेही केंद्र आहे.",
+
+
+        mahasiddha: "श्री महासिद्ध मंदिर, सोलापूर (महाराष्ट्र) येथे वसलेले एक पवित्र तीर्थस्थान आहे, जे श्री महासिद्ध या सिद्ध संतांना समर्पित आहे. त्यांच्या दिव्य शक्ती, आध्यात्मिक ज्ञान आणि कृपाशक्तीमुळे हे मंदिर भक्तांसाठी श्रद्धेचे केंद्र बनले आहे.
+
+मंदिरातील शांत व पारंपरिक वातावरणात ध्यान, पूजा आणि महासिद्ध यात्रा सारखे सण मोठ्या भक्तिभावाने साजरे होतात. येथे दर्शन केल्याने अडथळे दूर होतात, मानसिक शांतता लाभते आणि आध्यात्मिक उन्नती होते.",
+
+
+        amogsiddha: "श्री अमोघसिद्ध मंदिर, सोलापूर (महाराष्ट्र) येथे स्थित एक पवित्र आणि शांततेचे स्थान आहे, जे श्री अमोघसिद्ध सिद्ध पुरुष यांना समर्पित आहे.       अमोघसिद्ध" या नावाचा अर्थ आहे – ‘अचूक कृपा देणारा’ व ‘मोक्ष प्राप्त करणारा’.
+
+या मंदिरात भक्त अभिषेक, ध्यान, आणि अमोघसिद्ध जयंती सारख्या धार्मिक विधींमध्ये सहभागी होतात. येथे येणारे भक्त शांती, ज्ञान आणि संकटमुक्त जीवनासाठी प्रार्थना करतात. मंदिर अहिंसा, करुणा, आणि सद्भावना यांचे संदेश देते, आणि सोलापूरमधील एक आध्यात्मिक दीपस्तंभ म्हणून ओळखले जाते.",
+
+
+        bhutalsiddha: "श्री भूताळसिद्ध मंदिर, सोलापूर (महाराष्ट्र) येथील एक अत्यंत पवित्र स्थळ आहे. हे मंदिर श्री भूताळसिद्ध महाराज यांना समर्पित आहे, जे त्यांच्या आध्यात्मिक शक्ती, चमत्कार आणि अखंड भक्तीमुळे प्रसिद्ध आहेत. "भूताळसिद्ध" हे नाव त्यांच्या पृथ्वीशी असलेल्या दैवी नात्याचे प्रतीक आहे.
+
+हे मंदिर भक्तांसाठी शक्ती, आशीर्वाद आणि शांती मिळविण्याचे केंद्र आहे. येथे भूताळसिद्ध जयंती, धार्मिक प्रवचनं आणि सामूहिक कार्यक्रमांचे आयोजन होत असते, जे भक्ती आणि एकतेचा संदेश देतात.",
+
+        gotoTemple: "मंदिर पृष्ठावर जा",
+        footer: "© श्री महासिद्ध मंदिर, सोलापूर. सर्व हक्क राखीव."
+      },
+      kn: {
+        title: "ದೇವಾಲಯದ ಇತಿಹಾಸ",
+        heading: "🛕 ದೇವಾಲಯದ ಇತಿಹಾಸ",
+        subheading: "ಆಧ್ಯಾತ್ಮಿಕ ಸಿದ್ಧರ ಪರಂಪರೆಯ ಗೌರವ",
+
+        intro: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಮಹಾರಾಷ್ಟ್ರದ ಸೋಲಾಪುರನಲ್ಲಿ ಸ್ಥಿತಿಯಲ್ಲಿರುವ ಪವಿತ್ರ ದೇವಾಲಯವಾಗಿದ್ದು, ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಸಿದ್ಧ ಪುರುಷರಿಗಾಗಿ ಮೀಸಲಾಗಿರುತ್ತದೆ. ಇದು ಶಾಂತಿ, ರಕ್ಷಣೆ ಮತ್ತು ಆಧ್ಯಾತ್ಮಿಕ ಶಕ್ತಿಗಾಗಿ ಸಾವಿರಾರು ಭಕ್ತರನ್ನು ಆಕರ್ಷಿಸುತ್ತದೆ.
+
+ದೇವಾಲಯದ ವಾಸ್ತುಶಿಲ್ಪ ಪರಂಪರাগত ಹಿಂದೂ ಶೈಲಿಯಲ್ಲಿ ರೂಪುಗೊಂಡಿದ್ದು, ಮಹಾಸಿದ್ಧ ಯಾತ್ರೆ ಯಂತಹ ಉತ್ಸವಗಳು ಭಕ್ತಿಭಾವದಿಂದ ಆಚರಿಸಲಾಗುತ್ತವೆ. ಇಲ್ಲಿ ಪ್ರಾರ್ಥನೆ ಮಾಡಿದರೆ ಬಾಧೆಗಳು ದೂರವಾಗುತ್ತವೆ ಮತ್ತು ಆತ್ಮೀಯ ಬೆಳವಣಿಗೆ ಸಿದ್ಧವಾಗುತ್ತದೆ ಎಂಬ ನಂಬಿಕೆ ಇದೆ.
+
+ಈ ಮಂದಿರವು ದೇವಾಭಕ್ತಿ ಜೊತೆಗೆ ಸಮುದಾಯ ಸೇವೆ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಪರಂಪರೆಯ ಕೇಂದ್ರವಾಗಿಯೂ ಬೆಳೆಯುತ್ತಿದೆ."
+
+        mahasiddha: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಮಹಾರಾಷ್ಟ್ರದ ಸೊಲಾಪೂರಿನಲ್ಲಿ ಇರುವ ಪವಿತ್ರ ಸ್ಥಳವಾಗಿದೆ. ಇದು ಶ್ರೀ ಮಹಾಸಿದ್ಧರು ಎಂಬ ಸಿದ್ಧ ಸಂತರಿಗೆ ಸಮರ್ಪಿತವಾಗಿದೆ. ಅವರು ದೈವಿಕ ಶಕ್ತಿಯುಳ್ಳವರು ಹಾಗೂ ಭಕ್ತರ ಜೀವನದಲ್ಲಿ ಶಾಂತಿ ಮತ್ತು ಆಶೀರ್ವಾದ ನೀಡುವವರಾಗಿ ಪ್ರಸಿದ್ಧರಾಗಿದ್ದಾರೆ.
+
+ಪಾರಂಪರಿಕ ಶೈಲಿಯ ಈ ದೇವಾಲಯವು ಧ್ಯಾನ, ಪೂಜೆ ಮತ್ತು ಮಹಾಸಿದ್ಧ ಯಾತ್ರೆ ಹಬ್ಬದೊಂದಿಗೆ ಭಕ್ತಿ ಮತ್ತು ಸಂಸ್ಕೃತಿಯ ಕೇಂದ್ರವಾಗಿದೆ. ಈ ದೇವಾಲಯಕ್ಕೆ ಭೇಟಿ ನೀಡಿದರೆ ಕಷ್ಟಗಳು ದೂರವಾಗುತ್ತವೆ ಮತ್ತು ಆಂತರಿಕ ಶಕ್ತಿ ದೊರೆಯುತ್ತದೆ."
+
+
+
+        amogsiddha: "ಶ್ರೀ ಅಮೋಘಸಿದ್ಧ ಮಂದಿರ, ಮಹಾರಾಷ್ಟ್ರದ ಸೊಲಾಪುರದಲ್ಲಿ ಇರುವ ಒಂದು ಪವಿತ್ರ ದೇವಾಲಯವಾಗಿದ್ದು, ಅದು ಶ್ರೀ ಅಮೋಘಸಿದ್ಧ ಸಿದ್ಧಪುರಷರಿಗೆ ಸಮರ್ಪಿತವಾಗಿದೆ. "ಅಮೊಘಸಿದ್ಧ" ಎಂದರೆ ತಪ್ಪದೇ ಫಲ ನೀಡುವ, ಮೋಕ್ಷದ ದಾರಿ ತೋರಿಸುವ ಅರ್ಥ ನೀಡುತ್ತದೆ.
+
+ಈ ಮಂದಿರವು ಶಾಂತ ವಾತಾವರಣ, ಧಾರ್ಮಿಕ ಆಚರಣೆಗಳು ಮತ್ತು ಅಮೊಘಸಿದ್ಧ ಜಯಂತಿ ಕಾರ್ಯಕ್ರಮಗಳಿಗಾಗಿ ಪ್ರಸಿದ್ಧವಾಗಿದೆ. ಭಕ್ತರು ಇಲ್ಲಿ ಬಂದು ಜ್ಞಾನ, ಶಾಂತಿ ಮತ್ತು ಜೀವನದ ಅಡಚಣೆಗಳಿಂದ ಮುಕ್ತಿಯ ಆಶಯದೊಂದಿಗೆ ಪ್ರಾರ್ಥನೆ ಮಾಡುತ್ತಾರೆ. ಈ ದೇವಾಲಯ ಅಹಿಂಸೆ, ದಯೆ ಮತ್ತು ಧಾರ್ಮಿಕ ಶುದ್ಧತೆಯನ್ನು ಉತ್ತೇಜಿಸುತ್ತದೆ.",
+
+
+        bhutalsiddha: "ಶ್ರೀ ಭೂತಾಳಸಿದ್ಧ ಮಠ, ಮಹಾರಾಷ್ಟ್ರದ ಸೊಲಾಪುರದಲ್ಲಿ ನೆಲೆಸಿರುವ ಶ್ರದ್ಧಾ ಮತ್ತು ನಂಬಿಕೆಯ ಪವಿತ್ರ ಕ್ಷೇತ್ರವಾಗಿದೆ. ಈ ದೇವಾಲಯವು ಶ್ರೀ ಭೂತಾಳಸಿದ್ಧ ಮಹಾರಾಜರುಗಳಿಗೆ ಸಮರ್ಪಿತವಾಗಿದ್ದು, ಅವರು ತಮ್ಮ ಅಧ್ಯಾತ್ಮಶಕ್ತಿ, ಅದ್ಭುತಗಳು ಮತ್ತು ಭಕ್ತಿಯಿಂದ ಜನಪ್ರಿಯರಾಗಿದ್ದಾರೆ. "ಭೂತಾಳಸಿದ್ಧ" ಎಂಬ ಹೆಸರು ಭೂಮಿಯ ದೈವೀ ಸಂಪರ್ಕವನ್ನು ಸೂಚಿಸುತ್ತದೆ.
+
+ಇದು ಶಕ್ತಿ, ಆಶೀರ್ವಾದ ಮತ್ತು ಮನಶಾಂತಿಯನ್ನು ಹುಡುಕುವ ಭಕ್ತರಿಗೆ ಆಧ್ಯಾತ್ಮಿಕ ಆಶ್ರಯವಾಗಿದೆ. ಇಲ್ಲಿ ಭೂತಾಳಸಿದ್ಧ ಜಯಂತಿ, ಧಾರ್ಮಿಕ ಉಪನ್ಯಾಸಗಳು ಮತ್ತು ಸಮಾಜಮುಖಿ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಹಮ್ಮಿಕೊಳ್ಳಲಾಗುತ್ತದೆ, ಅವು ಭಕ್ತಿ ಮತ್ತು ಏಕತೆಯ ಸಂದೇಶ ಹರಡುತ್ತವೆ.",
+
+
+        gotoTemple: "ಮಂದಿರ ಪುಟಕ್ಕೆ ಹೋಗಿ",
+        footer: "© ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೊಲಾಪುರ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+      }
+    };
+
+    const lang = localStorage.getItem("lang") || "en";
+
+    function applyTranslations(langCode) {
+      const strings = translations[langCode] || translations.en;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (strings[key]) el.innerHTML = strings[key];
+      });
+      document.title = strings.title;
+    }
+
+    applyTranslations(lang);
+  </script>
+
+</body>
+</html>

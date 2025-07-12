@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Shri Mahasiddha Mandir, Solapur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Kaisei Tokumin', serif;
+      background-color: #fff8e1;
+      color: #4b2e05;
+    }
+    header {
+      background-color: #ff9800;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      animation: slideDown 1s ease;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: white;
+      text-shadow: 1px 1px 4px #a84300;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    nav {
+      background-color: #ffd54f;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0.5rem 1rem;
+      color: #3b1f0c;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #b30000;
+    }
+    .intro {
+      text-align: center;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
+    .intro h2 {
+      color: #b30000;
+      margin-bottom: 1rem;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: #fff3e0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInCard 1s ease-in-out forwards;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      color: #bf360c;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    @keyframes fadeInCard {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background-color: #e65100;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .card a:hover {
+      background-color: #bf360c;
+    }
+    footer {
+      background-color: #ff9800;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 data-i18n="temple">Shri Mahasiddha Mandir, Solapur</h1>
+</header>
+
+<nav>
+  <a href="Home.html">Home</a>
+  <a href="temple-history.html">History</a>
+  <a href="event.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="prayer.html">Prayer</a>
+  <a href="donate.html">Donate</a>
+  <a href="cont.html">Contact</a>
+</nav>
+
+<section class="intro">
+  <h2 data-i18n="mantra">ॐ नमः शिवाय</h2>
+  <p data-i18n="welcome">Welcome to the sacred temple of Shri Mahasiddha Mandir. Join us in divine prayers, explore traditions, and participate in upcoming festivals.</p>
+</section>
+
+<section class="cards">
+  <div class="card" style="animation-delay: 0.2s;">
+    <img src="images/mahasiddha.jpg" alt="Mahasiddha Idol">
+    <h3 data-i18n="history">Temple History</h3>
+    <p data-i18n="history_desc">Learn about the divine origin of Shri Mahasiddha Mandir and its cultural roots.</p>
+    <a href="temple-history.html" data-i18n="read_more">Read More</a>
+  </div>
+  <div class="card" style="animation-delay: 0.4s;">
+    <img src="images/img1.jpg" alt="Festival">
+    <h3 data-i18n="events">Upcoming Events</h3>
+    <p data-i18n="events_desc">Discover spiritual events, bhajans, and Mahapuja programs happening soon.</p>
+    <a href="event.html" data-i18n="see_events">See Events</a>
+  </div>
+  <div class="card" style="animation-delay: 0.6s;">
+    <img src="images/img4.jpg" alt="Gallery">
+    <h3 data-i18n="gallery">Temple Gallery</h3>
+    <p data-i18n="gallery_desc">View our collection of blessed images from past rituals and ceremonies.</p>
+    <a href="gallery.html" data-i18n="view_gallery">View Gallery</a>
+  </div>
+  <div class="card" style="animation-delay: 0.8s;">
+    <img src="images/img5.jpg" alt="Donation">
+    <h3 data-i18n="donate">Donate & Support</h3>
+    <p data-i18n="donate_desc">Contribute towards temple development, annadan, and pooja sevas.</p>
+    <a href="donate.html" data-i18n="donate_now">Donate Now</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Shri Mahasiddha Mandir, Solapur</p>
+  <p>155, Railway Line, Duffrin Chowk, Solapur</p>
+  <p>Email: info@mahasiddhamandir.org | Phone: +91 7840915189</p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      title: "Shri Mahasiddha Mandir, Solapur",
+      temple: "Shri Mahasiddha Mandir, Solapur",
+      mantra: "ॐ नमः शिवाय",
+      welcome: "Welcome to the sacred temple of Shri Mahasiddha Mandir. Join us in divine prayers, explore traditions, and participate in upcoming festivals.",
+      history: "Temple History",
+      history_desc: "Learn about the divine origin of Shri Mahasiddha Mandir and its cultural roots.",
+      events: "Upcoming Events",
+      events_desc: "Discover spiritual events, bhajans, and Mahapuja programs happening soon.",
+      gallery: "Temple Gallery",
+      gallery_desc: "View our collection of blessed images from past rituals and ceremonies.",
+      donate: "Donate & Support",
+      donate_desc: "Contribute towards temple development, annadan, and pooja sevas.",
+      read_more: "Read More",
+      see_events: "See Events",
+      view_gallery: "View Gallery",
+      donate_now: "Donate Now"
+    },
+    mr: {
+      title: "श्री महासिद्ध मंदिर, सोलापूर",
+      temple: "श्री महासिद्ध मंदिर, सोलापूर",
+      mantra: "ॐ नमः शिवाय",
+      welcome: "श्री महासिद्ध मंदिराच्या पवित्र मंदिरात आपले स्वागत आहे. धार्मिक प्रार्थना, परंपरा आणि उत्सवांचा अनुभव घ्या.",
+      history: "मंदिराचा इतिहास",
+      history_desc: "श्री महासिद्ध मंदिराची दिव्य उत्पत्ती आणि सांस्कृतिक मुळे जाणून घ्या.",
+      events: "आगामी कार्यक्रम",
+      events_desc: "आध्यात्मिक कार्यक्रम, भजन, आणि महापूजा कार्यक्रम जाणून घ्या.",
+      gallery: "मंदिर गॅलरी",
+      gallery_desc: "मागील विधी आणि समारंभांची पवित्र छायाचित्रे पहा.",
+      donate: "दान करा आणि मदत करा",
+      donate_desc: "मंदिर विकास, अन्नदान आणि पूजांच्या सेवेसाठी योगदान द्या.",
+      read_more: "अधिक वाचा",
+      see_events: "कार्यक्रम पाहा",
+      view_gallery: "गॅलरी पहा",
+      donate_now: "आता दान करा"
+    },
+    kn: {
+      title: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೊಲಾಪುರ",
+      temple: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೊಲಾಪುರ",
+      mantra: "ಓಂ ನಮಃ ಶಿವಾಯ",
+      welcome: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರದ ಪವಿತ್ರ ದೇವಾಲಯಕ್ಕೆ ಸುಸ್ವಾಗತ. ಧಾರ್ಮಿಕ ಪೂಜೆಗಳಲ್ಲಿ ಭಾಗವಹಿಸಿ ಮತ್ತು ಸಂಪ್ರದಾಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
+      history: "ಮಂದಿರದ ಇತಿಹಾಸ",
+      history_desc: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರದ ದಿವ್ಯ ಉಗಮ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಮೌಲ್ಯಗಳನ್ನು ಅರಿಯಿರಿ.",
+      events: "ಮುನ್ಸೂಚನೆಯ ಕಾರ್ಯಕ್ರಮಗಳು",
+      events_desc: "ಆಧ್ಯಾತ್ಮ ಕಾರ್ಯಕ್ರಮಗಳು, ಭಜನೆಗಳು ಮತ್ತು ಮಹಾಪೂಜಾ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
+      gallery: "ಮಂದಿರ ಗ್ಯಾಲರಿ",
+      gallery_desc: "ಹಿಂದಿನ ಧಾರ್ಮಿಕ ಆಚರಣೆಗಳ ಪವಿತ್ರ ಚಿತ್ರಗಳನ್ನು ವೀಕ್ಷಿಸಿ.",
+      donate: "ದಾನ ಮಾಡಿ ಮತ್ತು ಬೆಂಬಲಿಸಿ",
+      donate_desc: "ಮಂದಿರ ಅಭಿವೃದ್ಧಿಗೆ, ಅನ್ನದಾನಕ್ಕೆ ಮತ್ತು ಪೂಜೆ ಸೇವೆಗಳಿಗೆ ಸಹಾಯ ನೀಡಿ.",
+      read_more: "ಇನ್ನಷ್ಟು ಓದಿ",
+      see_events: "ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ನೋಡಿ",
+      view_gallery: "ಗ್ಯಾಲರಿ ವೀಕ್ಷಿಸಿ",
+      donate_now: "ಈಗ ದಾನ ಮಾಡಿ"
+    }
+  };
+
+  function applyTranslations() {
+ const lang = localStorage.getItem("lang") || "en";
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  }
+
+  applyTranslations();
+</script>
+
+</body>
+</html>

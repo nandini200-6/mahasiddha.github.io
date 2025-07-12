@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="pageTitle">Contact - Shri Mahasiddha Mandir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Kaisei Tokumin', serif;
+      background: linear-gradient(to right, #fff3e0, #ffe0b2);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    header {
+      background-color: #ff9800;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 4px #a84300;
+    }
+
+    .back-arrow {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      background-color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .back-arrow:hover {
+      background-color: #333;
+    }
+
+    .back-arrow::before {
+      content: "←";
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      animation: slideUp 0.9s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .contact-info h2, .contact-form h2 {
+      color: #b34700;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+      color: #3b1f0c;
+      margin: 0.4rem 0;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      margin: 0.6rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ff9800;
+      outline: none;
+      box-shadow: 0 0 5px #ffc107;
+    }
+
+    button {
+      padding: 1rem;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e65100;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background-color: #ffcc80;
+      color: #4b2e05;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="back-arrow" onclick="goBack()"></div>
+  <h1 data-i18n="contactUs">Contact Us</h1>
+</header>
+
+<div class="container">
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h2 data-i18n="templeName">Shri Mahasiddha Mandir</h2>
+    <p><strong data-i18n="address">Address:</strong><br>155, Railway Line, Duffrin Chowk, Solapur, Maharashtra</p>
+    <p><strong>Email:</strong><br><a href="mailto:info@mahasiddhamandir.org">info@mahasiddhamandir.org</a></p>
+    <p><strong data-i18n="phone">Phone:</strong><br><a href="tel:+917840915189">+91 7840915189</a></p>
+    <p><strong data-i18n="timings">Timings:</strong><br data-i18n="hours">Morning: 6:00 AM – 11:30 AM<br>Evening: 4:00 PM – 9:00 PM</p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2 data-i18n="sendMessage">Send Us a Message</h2>
+    <form onsubmit="return submitForm()">
+      <input type="text" id="name" placeholder="Your Name" data-i18n-placeholder="yourName" required>
+      <input type="email" id="email" placeholder="Your Email" data-i18n-placeholder="yourEmail" required>
+      <textarea id="message" placeholder="Your Message" data-i18n-placeholder="yourMessage" required></textarea>
+      <button type="submit" data-i18n="sendBtn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p data-i18n="footer">© 2025 Shri Mahasiddha Mandir, Solapur</p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      pageTitle: "Contact - Shri Mahasiddha Mandir",
+      contactUs: "Contact Us",
+      templeName: "Shri Mahasiddha Mandir",
+      address: "Address:",
+      phone: "Phone:",
+      timings: "Timings:",
+      sendMessage: "Send Us a Message",
+      yourName: "Your Name",
+      yourEmail: "Your Email",
+      yourMessage: "Your Message",
+      sendBtn: "Send Message",
+      footer: "© 2025 Shri Mahasiddha Mandir, Solapur"
+    },
+    mr: {
+      pageTitle: "संपर्क - श्री महासिद्ध मंदिर",
+      contactUs: "संपर्क करा",
+      templeName: "श्री महासिद्ध मंदिर",
+      address: "पत्ता:",
+      phone: "फोन:",
+      timings: "वेळ:",
+      sendMessage: "आम्हाला संदेश पाठवा",
+      yourName: "तुमचे नाव",
+      yourEmail: "तुमचा ईमेल",
+      yourMessage: "तुमचा संदेश",
+      sendBtn: "संदेश पाठवा",
+      footer: "© 2025 श्री महासिद्ध मंदिर, सोलापूर"
+    },
+    kn: {
+      pageTitle: "ಸಂಪರ್ಕ - ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ",
+      contactUs: "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+      templeName: "ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ",
+      address: "ವಿಳಾಸ:",
+      phone: "ದೂರವಾಣಿ:",
+      timings: "ಸಮಯ:",
+      sendMessage: "ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ",
+      yourName: "ನಿಮ್ಮ ಹೆಸರು",
+      yourEmail: "ನಿಮ್ಮ ಇಮೇಲ್",
+      yourMessage: "ನಿಮ್ಮ ಸಂದೇಶ",
+      sendBtn: "ಸಂದೇಶ ಕಳುಹಿಸಿ",
+      footer: "© 2025 ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೊಲಾಪುರ"
+    }
+  };
+
+  const lang = localStorage.getItem("lang") || "en";
+
+  function applyTranslations(langCode) {
+    const strings = translations[langCode] || translations.en;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (strings[key]) el.textContent = strings[key];
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (strings[key]) el.placeholder = strings[key];
+    });
+    document.title = strings.pageTitle;
+  }
+
+  function goBack() {
+    window.location.href = "temple.html.html";
+  }
+
+  function submitForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill all fields before submitting.");
+      return false;
+    }
+
+    alert("🙏 Thank you, " + name + "! Your message has been received.");
+    return false;
+  }
+
+  applyTranslations(lang);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Book a Prayer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Kaisei Tokumin', serif;
+      margin: 0;
+      background: linear-gradient(to right, #fff8e1, #ffe0b2);
+      color: #4b2e05;
+    }
+
+    header {
+      background-color: #f57c00;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .back-arrow {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      background-color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .back-arrow::before {
+      content: "←";
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #a84300;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, select, button {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #b30000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: red;
+    }
+
+    .scanner {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .scanner img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .price-box {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #b30000;
+    }
+
+    footer {
+      background-color: #f57c00;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="back-arrow" onclick="window.location.href='temple.html.html'"></div>
+  <h1 data-i18n="header">📿 Book a Prayer</h1>
+</header>
+
+<main>
+  <h2 data-i18n="subheading">Submit Your Prayer Request</h2>
+  <form onsubmit="return handleSubmit()">
+    <input type="text" placeholder="Full Name" required data-i18n-placeholder="name" />
+    <input type="text" placeholder="Phone Number" required data-i18n-placeholder="phone" />
+
+    <select id="poojaSelect" required>
+      <option value="" disabled selected data-i18n="choose">Select Prayer Type</option>
+      <option value="101" data-i18n="puja1">Maha Abhishek</option>
+      <option value="501" data-i18n="puja2">Maha Abhishek</option>
+      <option value="151" data-i18n="puja3">Health & Prosperity</option>
+    </select>
+
+    <input type="date" required />
+    <select required>
+      <option value="morning" data-i18n="morning">Morning</option>
+      <option value="evening" data-i18n="evening">Evening</option>
+    </select>
+
+    <div class="scanner">
+      <img src="images/scanner.png" alt="QR Scanner" />
+    </div>
+
+    <div class="price-box" id="priceBox">₹0</div>
+
+    <button type="submit" data-i18n="submitBtn">Submit Prayer</button>
+  </form>
+</main>
+
+<footer>
+  <span data-i18n="footer">© Shri Mahasiddha Mandir, Solapur. All rights reserved.</span>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      title: "Book a Prayer",
+      header: "📿 Book a Prayer",
+      subheading: "Submit Your Prayer Request",
+      name: "Full Name",
+      phone: "Phone Number",
+      choose: "Select Prayer Type",
+      puja1: "Abhishek",
+      puja2: "Maha Abhishek",
+      puja3: "Health & Prosperity",
+      morning: "Morning",
+      evening: "Evening",
+      submitBtn: "Submit Prayer",
+      footer: "© Shri Mahasiddha Mandir, Solapur. All rights reserved."
+    },
+    mr: {
+      title: "प्रार्थना नोंदणी",
+      header: "📿 प्रार्थना नोंदणी",
+      subheading: "आपली प्रार्थना मागणी सबमिट करा",
+      name: "पूर्ण नाव",
+      phone: "फोन नंबर",
+      choose: "प्रार्थनेचा प्रकार निवडा",
+      puja1: "अभिषेक",
+      puja2: "महाअभिषेक",
+      puja3: "आरोग्य व समृद्धी",
+      morning: "सकाळी",
+      evening: "संध्याकाळी",
+      submitBtn: "प्रार्थना सबमिट करा",
+      footer: "© श्री महासिद्ध मंदिर, सोलापूर. सर्व हक्क राखीव."
+    },
+    kn: {
+      title: "ಪ್ರಾರ್ಥನೆ ಬುಕ್ ಮಾಡಿ",
+      header: "📿 ಪ್ರಾರ್ಥನೆ ಬುಕ್ ಮಾಡಿ",
+      subheading: "ನಿಮ್ಮ ಪ್ರಾರ್ಥನೆ ಸಲ್ಲಿಸಿ",
+      name: "ಪೂರ್ಣ ಹೆಸರು",
+      phone: "ಫೋನ್ ಸಂಖ್ಯೆ",
+      choose: "ಪೂಜೆಯ ಪ್ರಕಾರ ಆಯ್ಕೆಮಾಡಿ",
+      puja1: "ಅಭಿಷೇಕ",
+      puja2: "ಮಹಾ ಅಭಿಷೇಕ",
+      puja3: "ಆರೋಗ್ಯ ಮತ್ತು ಸಮೃದ್ಧಿ",
+      morning: "ಬೆಳಗ್ಗೆ",
+      evening: "ಸಂಜೆ",
+      submitBtn: "ಪ್ರಾರ್ಥನೆ ಸಲ್ಲಿಸಿ",
+      footer: "© ಶ್ರೀ ಮಹಾಸಿದ್ಧ ಮಂದಿರ, ಸೊಲಾಪುರ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+    }
+  };
+
+const lang = localStorage.getItem("lang") || "en";
+  function applyTranslations(langCode) {
+    const strings = translations[langCode] || translations.en;
+    document.title = strings.title;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (strings[key]) el.innerHTML = strings[key];
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (strings[key]) el.placeholder = strings[key];
+    });
+
+    document.querySelectorAll("option[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (strings[key]) el.textContent = strings[key];
+    });
+  }
+
+  function handleSubmit() {
+    alert("🙏 Your prayer request has been submitted.");
+    return false;
+  }
+
+  // Show price on pooja selection
+  document.addEventListener("DOMContentLoaded", function () {
+    const poojaSelect = document.getElementById("poojaSelect");
+    const priceBox = document.getElementById("priceBox");
+
+    poojaSelect.addEventListener("change", function () {
+      const price = poojaSelect.value;
+      priceBox.textContent = "₹" + price;
+    });
+
+    applyTranslations(lang);
+  });
+</script>
+
+</body>
+</html>
